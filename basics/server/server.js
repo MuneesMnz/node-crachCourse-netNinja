@@ -1,9 +1,24 @@
 const http = require("http");
 const fs = require("fs");
+const lodash = require("lodash");
 
 const server = http.createServer((req, res) => {
-  console.log("Requset made");
-  console.log(req.url, req.method);
+  // console.log("Requset made");
+  // console.log(req.url, req.method);
+
+  //LODASH
+  // --------
+
+  const num = lodash.random(0, 20); //using lodash creating random numbers
+  console.log(num);
+
+  const abc = lodash.once(() => {
+    console.log("consoling abc function"); //using once its only load once 
+  });
+
+  abc()
+  abc()
+  abc()
 
   //SET HEADERS CONTENT TYPE
   //-------------------------
